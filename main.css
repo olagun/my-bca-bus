@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-color: #E3F2FD;
+    margin: 0;
+}
+
+.town {
+    will-change: transform, opacity;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #E0E0E0;
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: -1px;
+    break-inside: avoid;
+}
+
+.town__loc {
+    color: gray;
+    text-transform: uppercase;
+}
+
+.town__search {
+    will-change: background-color, color;
+    font-size: 1rem;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    outline: none;
+    width: 100vw;
+    padding: 1rem;
+    top: 0;
+    margin: 0;
+    margin-bottom: .5rem;
+    position: sticky;
+    position: -webkit-sticky;
+    z-index: 1;
+    transition: background-color ease-in-out .2s, color ease-in-out .2s;
+}
+
+.town_search,
+.town__search::-webkit-input-placeholder {
+    color: white;
+}
+
+.town__search:focus {
+    background-color: white;
+}
+
+.town__search:focus,
+.town__search:focus::-webkit-input-placeholder {
+    color: gray;
+}
+
+.town__container {
+    column-count: 3;
+    padding: 1rem;
+    padding-top: .5rem;
+}
+
+[class*=container] {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 0;
+}
+
+@media (max-width: 800px) {
+    .town__container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 2000px) {
+     :root {
+        font-size: 150%;
+    }
+}
