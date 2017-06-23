@@ -16,28 +16,10 @@ const input = document.querySelector('.town__search')
 const townContainer = document.querySelector('.town__container')
 const towns = {}
 
-const favoriteTown = document.cookie.match(/favoriteTown\=*/)
-console.log(favoriteTown)
-
 const favoriteContainer = document.querySelector('.favorite__container')
-let count = 0
+let favorite = localStorage.getItem('favorite')
 
-function favorite(element, town) {
-    if (element.dataset.favorite) {
-        townContainer.append(element)
-        delete element.dataset.favorite
-    } else {
-        element.dataset.favorite = 'true'
-        document.cookie = `favoriteTown=${town}`
-        favoriteContainer.append(element)
-    }
 
-    // Hack, does not work
-    if (!count++) {
-        favoriteContainer.style['marginTop'] = '.5rem'
-        favoriteContainer.style['marginBottom'] = '.5rem'
-    }
-}
 
 /**
  * Recursively updates the view
@@ -61,10 +43,15 @@ function favorite(element, town) {
                 // Mount only the first update
                 if (start) {
                     Object.keys(towns).forEach(town =>
+                        // Perf mount
                         townContainer.insertAdjacentHTML('beforeend', `
-                            <div class="town" data-town="${town}" onClick="favorite(this, this.dataset.town)">\
-                                <span class="town__name">${town}</span>\
-                                <span class="town__loc">${towns[town]}</span>\
+                            <div 
+                                class="town"
+                                data-town="${town}"
+                                onClick="handleFavorite()"
+                            >
+                                <span class="town__name">${town}</span>
+                                <span class="town__loc">${towns[town]}</span>
                             </div>
                         `)
                     )
