@@ -21,7 +21,7 @@ npm run build:dev
 npm start:dev
 ```
 
-I created a few more shortcut commands to make development less of a pain, all located in the `package.json` configuration file.
+I created a few more shortcut commands to make development less of a pain, all located within the `package.json` configuration file.
 
 ## License
 See it [here](https://github.com/samolaogun/my-bca-bus/blob/master/LICENSE).
