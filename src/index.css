@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: sans-serif;
-    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
 }
 
 body {
@@ -28,7 +28,7 @@ body {
 .town__search {
     will-change: background-color, color;
     font-size: 1rem;
-    background-color: #2196F3;
+    /*background-color: var(--blue);*/
     color: white;
     border: none;
     outline: none;
@@ -38,13 +38,13 @@ body {
     margin: 0;
     margin-bottom: .5rem;
     position: sticky;
-    position: -webkit-sticky;
+    position: sticky;
     z-index: 1;
     transition: background-color ease-in-out .2s, color ease-in-out .2s;
 }
 
 .town_search,
-.town__search::-webkit-input-placeholder {
+.town__search::placeholder {
     color: white;
 }
 
@@ -53,7 +53,7 @@ body {
 }
 
 .town__search:focus,
-.town__search:focus::-webkit-input-placeholder {
+.town__search:focus::placeholder {
     color: gray;
 }
 
