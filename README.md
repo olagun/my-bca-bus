@@ -4,7 +4,7 @@ My high-school doesn't provide access to bus locations conveniently. The only wa
 
 
 ## Quick Start
-Usage is fairly simple, requiring only **npm**, **yarn**, and, of course **node**.
+Usage is fairly simple, requiring only **npm**, **yarn**, and of course, **node**.
 
 ### Install
 ```
