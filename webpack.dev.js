@@ -10,6 +10,6 @@ module.exports = Merge(CommonConfig, {
     devServer: {
         contentBase: path.resolve(__dirname, 'build'),
         compress: true,
-        open: true
+        port: 9000
     }
 });

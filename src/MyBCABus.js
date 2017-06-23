@@ -28,10 +28,12 @@ export default class MyBCABus {
             this.townContainer.insertAdjacentElement('beforeend', this.favoriteElement);
         }
 
-        this.favoriteContainer.insertAdjacentElement('beforeend', this.favoriteElement = element);
+        this.favoriteElement === element ?
+            this.favoriteElement = void 0 :
+            this.favoriteContainer.insertAdjacentElement('beforeend', this.favoriteElement = element);
 
         if ('Storage' in window)
-            localStorage.setItem('favorite', this.favoriteElement.dataset.town);
+            localStorage.setItem('favorite', void(!this.favoriteElement || this.favoriteElement.dataset.town));
     }
 
     /**
@@ -81,7 +83,6 @@ export default class MyBCABus {
      * @protected
      */
     _handleInput() {
-
         document.querySelectorAll('.town').forEach(town => town.style.display = 'flex');
 
         // Cheaply hide irrelevant towns
