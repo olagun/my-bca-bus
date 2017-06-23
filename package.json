@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start:dev": "webpack-dev-server --env=dev --port 3000",
-        "start:prod": "node index",
+        "start:prod": "node ./bin/www",
         "build:dev": "webpack --env=dev; eslint --fix --parser-options='ecmaVersion:8' src",
         "build:prod": "webpack --env=prod",
         "clean": "rm -R build"
@@ -21,10 +21,11 @@
     },
     "homepage": "https://github.com/samolaogun/my-bca-bus#readme",
     "dependencies": {
-        "babili-webpack-plugin": "^0.1.1",
         "express": "^4.15.3"
     },
     "devDependencies": {
+        "babili-webpack-plugin": "^0.1.1",
+        "dotenv": "^4.0.0",
         "autoprefixer": "^7.1.1",
         "babel-core": "^6.25.0",
         "babel-loader": "^7.1.0",
