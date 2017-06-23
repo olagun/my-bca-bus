@@ -12,4 +12,4 @@ npm start:dev
 ```
 
 ## License
-MIT
+See it [here](https://github.com/samolaogun/my-bca-bus/blob/master/LICENSE).
