@@ -6,10 +6,8 @@ const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const BabiliPlugin = require('babili-webpack-plugin');
 
 const CommonConfig = require('./webpack.common');
-
 
 module.exports = Merge(CommonConfig, {
     plugins: [
@@ -20,7 +18,6 @@ module.exports = Merge(CommonConfig, {
         new webpack.LoaderOptionsPlugin({
             debug: false,
             minimize: true
-        }),
-        new BabiliPlugin()
+        })
     ]
 });
