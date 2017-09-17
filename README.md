@@ -1,6 +1,6 @@
 # My BCA Bus
 
-My high-school doesn't provide access to bus locations conveniently. The only way to access bus locations is to find one of the few teachers with a iPad displaying bus locations. Sounds fairly simple, but it's somewhat inconvenient. A few students from my school decided to create an application to solve this problem. Bus locations are logged on a Google Spreadsheet and since Google provides an API to use their service, they created a website to concisely display this information. Unfortunately the version that they created didn't include a polling feature, making the application state unreliable. Having never used the Google Spreadsheet's API, I created my own version—here it is. I tried to use modern JavaScript techniques without utilizing any heavy frameworks.
+My high-school doesn't provide access to bus locations conveniently—here's one.
 
 
 ## Quick Start
